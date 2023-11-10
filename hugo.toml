@@ -1,4 +1,4 @@
-baseUrl = '/'
+baseUrl = 'https://siroctopus.com'
 title = 'Sir Octopus'
 theme = 'siroctopus-com-2023'
 timeZone = 'Australia/Melbourne'
