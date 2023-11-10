@@ -1,0 +1,37 @@
+baseURL = '/'
+lang = 'en'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[params]
+  [params.body]
+    background_color = '#ede9dd'
+    text_color = '#000'
+  [params.footer]
+    background_color = '#191919'
+  [params.colors]
+    blue = '#036fb0'
+    green = '#a0a918'
+    yellow = '#e6c400'
+    orange = '#e46d11'
+    magenta = '#c00a5d'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+# [[menus.main]]
+# name = 'Tags'
+# pageRef = '/tags'
+# weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "v0.119.0"

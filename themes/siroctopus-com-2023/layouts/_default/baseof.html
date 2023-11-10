@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body bgcolor="{{ .Site.Params.body.background_color }}" text="{{ .Site.Params.body.text_color}}">
+<!-- <header> -->
+{{ partial "header.html" . }}
+<!-- </header> -->
+<!-- <main> -->
+<div class="main">
+{{ block "main" . }}{{ end }}
+</div>
+<!-- </main> -->
+<!-- <footer> -->
+{{ partial "footer.html" . }}
+<!-- </footer> -->
+</body>
+</html>

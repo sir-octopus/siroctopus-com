@@ -1,0 +1,37 @@
+<div class="footer">
+  <table class="" border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <td bgcolor="{{ .Site.Params.colors.blue }}">&nbsp;</td>
+      <td bgcolor="{{ .Site.Params.colors.green }}">&nbsp;</td>
+      <td bgcolor="{{ .Site.Params.colors.yellow }}">&nbsp;</td>
+      <td bgcolor="{{ .Site.Params.colors.orange }}">&nbsp;</td>
+      <td bgcolor="{{ .Site.Params.colors.magenta }}">&nbsp;</td>
+    </tr>
+  </table>
+  <table border="0" cellspacing="0" cellpadding="8" width="100%" bgcolor="{{ .Site.Params.footer.background_color }}">
+    <tr>
+      <td align="center">
+
+        <table border="0" cellspacing="0" cellpadding="8" width="100%" bgcolor="" class="parent">
+          <tr>
+            <td class="footer-menu monospace" align="center">
+              <a href="https://domaincontact.cloudflareregistrar.com/siroctopus.com">Contact</a>
+              {{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="monospace">
+              &copy; siroctopus.com. All rights reserved.
+            </td>
+          </tr>
+          <!-- <tr>
+            <td align="">
+              <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html32" height="31" width="88" loading="lazy"></a>
+            </td>
+          </tr> -->
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</div>

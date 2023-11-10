@@ -1,0 +1,5 @@
+/* CSS v2+ ONLY */
+
+.home>table:nth-child(3n+1) {
+  clear: both;
+}

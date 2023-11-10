@@ -1,0 +1,153 @@
+@import url("/advanced.css");
+
+/* CSS v1 ONLY */
+
+/* reset */
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* utillities */
+.center {
+  text-align: center;
+}
+
+/* theme */
+body, html {
+  min-height: 100%;
+  min-height: 100vh;
+}
+body,
+html, p, pre {
+  font-size: 16px;
+}
+p, pre {
+  line-height: 20px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body, html {
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 8px;
+}
+body, p, td, h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+pre, .monospace {
+  font-family: Consolas, 'Courier New', Courier, monospace;
+}
+.single > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.parent  {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* post */
+.single-header {
+  overflow: auto;
+}
+.single,
+.inner {
+  padding: 16px;
+}
+.highlight {
+  padding: 16px;
+  background: #272822;
+}
+
+/* navigation */
+.menu .active {
+  text-decoration: underline;
+}
+.menu {
+  padding: 0 16px 0 16px;
+}
+
+/*  header  */
+.header-bg {
+  background-image: url("/images/header.png");
+  background-repeat: repeat-x;
+  background-position-y: 108px;
+  background-size: 1px 109px;
+  overflow: auto;
+}
+
+/* home */
+.halves,
+.thirds,
+.float-l {
+  float: left;
+}
+.whole img,
+.halves img,
+.thirds img {
+  height: auto;
+  max-width: 100%;
+  min-width: 320px;
+}
+
+image.banner,
+.float-r {
+  float: right;
+}
+.whole-title {
+  margin-top: 0;
+}
+
+.halves {
+  width: 50%;
+}
+
+.thirds {
+  width: 33%;
+}
+
+.footer td, .footer a, .footer a:visited {
+  color: #FFF;
+}
+.footer-menu .float-l {
+  float: none;
+  display: inline;
+}
+
+/* index */
+.post-item {
+  overflow: auto;
+  margin: 16px 0;
+}
+.post-item img {
+  padding: 0 16px 16px 0;
+}
+.post-item-title,
+.post-item-summary {
+  padding: 0;
+  margin: 0;
+}
+.post-item-date {
+  padding: 8px 0 8px 0;
+  margin: 0;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+/* search */
+.search {
+  margin-bottom: 16px;
+}

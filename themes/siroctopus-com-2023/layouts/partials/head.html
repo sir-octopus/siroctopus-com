@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s // %s" .Title site.Title }}{{ end }}</title>
+<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}

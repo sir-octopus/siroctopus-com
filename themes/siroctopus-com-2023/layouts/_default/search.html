@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <div class="search">
+    {{ with .Resources.GetMatch .Params.Image }}
+      {{ with .Fill "320x320 gif" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="float-r" hspace="16" vspace="16">
+      {{ end }}
+    {{ end }}
+
+    <h1>{{ .Title }}</h1>
+
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <div id="search"></div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
+  </div>
+{{ end }}

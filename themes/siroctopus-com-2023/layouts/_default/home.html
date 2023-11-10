@@ -1,0 +1,109 @@
+{{ define "main" }}
+  <div class="home">
+    {{ .Content }}
+
+    {{ $posts := where .Site.RegularPages ".Section" "in" (slice "posts" "sections") }}
+    {{ $whole  := $posts | first 1 }}
+    {{ $halves := $posts | symdiff $whole | first 2 }}
+    {{ $thirds := $posts | symdiff $whole | symdiff $halves | first 6 }}
+
+    {{ range $whole }}
+      <table border="0" cellspacing="0" cellpadding="16" width="100%" class="whole">
+        <tr>
+          <td bgcolor="">
+            {{ if .Params.image }}
+              <a href="{{ .RelPermalink }}">
+                {{ with .Resources.GetMatch .Params.image }}
+                  {{ $imageJpg := .Fill "480x320" }}
+                  {{ $imageWebp := .Fill "480x320 webp" }}
+                  <picture>
+                    <source srcset="{{ $imageWebp.RelPermalink }}" type="image/webp" align="left" hspace="16">
+                    <source srcset="{{ $imageJpg.RelPermalink }}" type="image/jpeg" align="left" hspace="16">
+                    <img src="{{ $imageJpg.RelPermalink }}" width="480" height="320" align="left" hspace="16">
+                  </picture>
+                {{ end }}
+              </a>
+              <!-- Following image forces hero text min width of 320px -->
+              <img src="/images/1pxl.gif" width="100" height="1" style="height:1">
+            {{ end }}
+            <h2 class="whole-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ if not .Date.IsZero }}
+              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{ $dateHuman := .Date | time.Format "2006-01-01" }}
+              <time class="monospace" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            {{ end }}
+            <p>{{ .Summary }}</p>
+          </td>
+        </tr>
+      </table>
+    {{ end }}
+
+    {{ range $halves }}
+      <table border="0" cellspacing="0" cellpadding="16" class="halves">
+        <tr>
+          <td bgcolor="">
+            {{ if .Params.image }}
+              <center><a href="{{ .RelPermalink }}">
+                {{ with .Resources.GetMatch .Params.image }}
+                  {{ $imageJpg := .Fill "480x320" }}
+                  {{ $imageWebp := .Fill "480x320 webp" }}
+                  <picture>
+                    <source srcset="{{ $imageWebp.RelPermalink }}" type="image/webp">
+                    <source srcset="{{ $imageJpg.RelPermalink }}" type="image/jpeg">
+                    <img src="{{ $imageJpg.RelPermalink }}" width="480" height="320">
+                  </picture>
+                {{ end }}
+              </center>
+            {{ end }}
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ if not .Date.IsZero }}
+              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{ $dateHuman := .Date | time.Format "2006-01-01" }}
+              <pre><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></pre>
+            {{ end }}
+            <p>{{ .Summary }}</p>
+          </td>
+        </tr>
+      </table>
+    {{ end }}
+
+    {{ range $thirds }}
+      <table border="0" cellspacing="0" cellpadding="16" class="thirds">
+        <tr>
+          <td>
+            {{ if .Params.image }}
+              <center>
+                <a href="{{ .RelPermalink }}">
+                  {{ with .Resources.GetMatch .Params.image }}
+                    {{ $imageJpg := .Fill "320x240" }}
+                    {{ $imageWebp := .Fill "320x240 webp" }}
+                    <picture>
+                      <source srcset="{{ $imageWebp.RelPermalink }}" type="image/webp">
+                      <source srcset="{{ $imageJpg.RelPermalink }}" type="image/jpeg">
+                      <img src="{{ $imageJpg.RelPermalink }}" width="320" height="240" loading="lazy">
+                    </picture>
+                  {{ end }}
+                </a>
+              </center>
+            {{ end }}
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ if not .Date.IsZero }}
+              {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{ $dateHuman := .Date | time.Format "2006-01-01" }}
+              <time class="monospace" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            {{ end }}
+            <p>{{ .Summary }}</p>
+          </td>
+        </tr>
+      </table>
+    {{ end }}
+
+    <table class="" border="0" cellspacing="0" cellpadding="16" width="100%">
+      <tr>
+        <td align="right">
+          <a href="/posts/page/2/">Next page &gt;&gt;</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+{{ end }}
