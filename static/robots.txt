@@ -1,0 +1,2 @@
+User-agent: *
+# Sitemap: https://siroctopus.com/sitemap.xml

@@ -1,0 +1,10 @@
+baseUrl = '/'
+title = 'Sir Octopus'
+theme = 'siroctopus-com-2023'
+timeZone = 'Australia/Melbourne'
+lang = 'en'
+languageCode = 'en-AU'
+
+summaryLength = 10
+paginate = 9
+enableRobotsTXT = true
