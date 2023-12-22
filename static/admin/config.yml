@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: sir-octopus/siroctopus-com
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'content/posts'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - { label: 'Hero image', name: 'image', widget: 'image', choose_url: false }
