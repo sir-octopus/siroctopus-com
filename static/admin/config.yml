@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: sir-octopus/siroctopus-com
-media_folder: static/img
+media_folder: /static/img
 public_folder: /img
 collections:
   - name: 'posts'
@@ -22,4 +22,4 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
-      - { label: 'Hero image', name: 'image', widget: 'image', choose_url: false }
+      - { label: 'Hero image', name: 'image', widget: 'image', choose_url: false, media_folder: 'images' }
