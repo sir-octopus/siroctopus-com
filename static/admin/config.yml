@@ -9,6 +9,9 @@ collections:
     folder: 'content/posts'
     create: true
     slug: '{{slug}}'
+    nested:
+      depth: 100
+      summary: '{{title}}'
     editor:
       preview: false
     fields:
