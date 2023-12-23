@@ -7,6 +7,9 @@ collections:
   - name: 'posts'
     label: 'Posts'
     folder: 'content/posts'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     create: true
     slug: '{{slug}}'
     nested:
