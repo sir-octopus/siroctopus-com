@@ -16,7 +16,7 @@ collections:
       depth: 100
       summary: '{{title}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
@@ -26,3 +26,16 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
       - { label: 'Hero image', name: 'image', widget: 'image', choose_url: false, media_folder: 'images' }
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'content'
+    path: '{{slug}}/index'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - { label: 'Menu', name: 'menu', widget: 'list' }
