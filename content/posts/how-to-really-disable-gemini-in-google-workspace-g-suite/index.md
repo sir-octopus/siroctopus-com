@@ -8,7 +8,7 @@ tags:
   - gsuite
 date: 2025-01-20T14:36:00.000Z
 description: Google frustrates disabling Gemini but you can request their support to do it
-draft: true
+draft: false
 image: images/5392319221_fd27c3cb03_o.jpg
 ---
 As at January 2025, Google makes it difficult to disable their AI darling Gemini in Google Workspace. While they have [documentation for turning off access to parts of Gemini](https://apps.google.com/supportwidget/articlehome), disabling its hooks into Gmail, Drive, Chat, and Meetings may be hidden from you.
