@@ -6,7 +6,7 @@ tags:
   - google
   - workspace
   - gsuite
-date: 2025-01-20T14:36:00.000Z
+date: 2025-01-19T00:00:00.000Z
 description: Google frustrates disabling Gemini but you can request their support to do it
 draft: false
 image: images/5392319221_fd27c3cb03_o.jpg
